@@ -1,0 +1,40 @@
+.task-list-wrapper {
+  padding: 1rem 2rem;
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    .search-input {
+      flex: 1;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+
+  ul.tasks {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0.75rem 0;
+
+      a {
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        display: block;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        background: #f7f7f7;
+        color: #333;
+
+        &:hover {
+          background: #eaeaea;
+        }
+      }
+    }
+  }
+}

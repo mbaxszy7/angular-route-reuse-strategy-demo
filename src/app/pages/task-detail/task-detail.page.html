@@ -1,0 +1,27 @@
+<div class="task-detail-wrapper">
+  <div class="left">
+    <h2 class="task-title">Task #{{ id }}</h2>
+
+    <div *ngFor="let sid of settingIds" class="setting-item">
+      <ng-container *ngIf="loadingStatus[sid]; else loadingTpl">
+        <label>Setting {{ sid }}</label>
+        <select>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </ng-container>
+      <ng-template #loadingTpl>
+        <div class="loading">Loading setting {{ sid }}...</div>
+      </ng-template>
+    </div>
+
+    <textarea rows="4" placeholder="Comment" class="comment"></textarea>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="right">
+    <iframe [src]="iframeUrl" title="integration" class="integration-frame"></iframe>
+  </div>
+</div>

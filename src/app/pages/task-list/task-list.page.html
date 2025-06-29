@@ -1,0 +1,17 @@
+<div class="task-list-wrapper">
+  <header>
+    <h1>Task List</h1>
+    <input
+      type="text"
+      [(ngModel)]="search"
+      placeholder="Task quick search"
+      class="search-input"
+    />
+  </header>
+
+  <ul class="tasks">
+    <li *ngFor="let task of filteredTasks">
+      <a href="#" (click)="goTo(task.id); $event.preventDefault()">{{ task.title }}</a>
+    </li>
+  </ul>
+</div>

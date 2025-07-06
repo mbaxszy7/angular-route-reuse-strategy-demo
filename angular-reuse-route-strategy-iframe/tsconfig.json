@@ -14,10 +14,9 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve",
-    "baseUrl": ".",
     "paths": {
       "third-party-iframe": [
-        "angular-reuse-route-strategy-iframe/projects/third-party-iframe/src/public-api.ts"
+        "./dist/third-party-iframe"
       ]
     }
   },
@@ -32,6 +31,15 @@
   "references": [
     {
       "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/third-party-iframe/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/third-party-iframe/tsconfig.spec.json"
     }
   ]
 }

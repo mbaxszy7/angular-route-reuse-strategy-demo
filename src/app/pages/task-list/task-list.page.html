@@ -1,6 +1,11 @@
 <div class="task-list-wrapper">
   <header>
+
     <h1>Task List</h1>
+
+    <button class="current-btn" *ngIf="(lastTaskId$ | async) !== null" (click)="openLast()">
+      Current Task #{{ lastTaskId$ | async }}
+    </button>
     <input
       type="text"
       [(ngModel)]="search"
@@ -9,9 +14,11 @@
     />
   </header>
 
-  <ul class="tasks">
+  <ul class="tasks" *ngIf="!isLoading">
     <li *ngFor="let task of filteredTasks">
       <a href="#" (click)="goTo(task.id); $event.preventDefault()">{{ task.title }}</a>
     </li>
   </ul>
+
+  <p *ngIf="isLoading ">Tasks loading...</p>
 </div>

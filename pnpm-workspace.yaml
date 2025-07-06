@@ -1,0 +1,4 @@
+packages:
+  - '.'
+  - 'angular-reuse-route-strategy-iframe'
+  - 'angular-reuse-route-strategy-iframe/projects/*'
